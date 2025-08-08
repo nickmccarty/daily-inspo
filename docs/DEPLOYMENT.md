@@ -110,10 +110,7 @@ SERVER_PORT=8002
 
 Edit the methodology file to customize idea generation:
 
-```bash
-# Edit the generation methodology
-# File: idea_generation/IDEA_GENERATION_METHODOLOGY.md
-```
+[idea_generation/IDEA_GENERATION_METHODOLOGY.md](https://github.com/nickmccarty/daily-inspo/blob/main/docs/DEPLOYMENT.md)
 
 ## Directory Structure
 
