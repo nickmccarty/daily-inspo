@@ -1,0 +1,436 @@
+2025-08-07 20:09:32,722 - __main__ - INFO - Starting daily idea generation
+2025-08-07 20:09:32,722 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 20:09:32,722 - __main__ - INFO - Prompt constructed
+2025-08-07 20:10:00,357 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 20:10:00,357 - __main__ - INFO - Successfully parsed idea: SkillStack - AI-Powered Career Transition Platform
+2025-08-07 20:10:00,357 - __main__ - INFO - Idea structure validation passed
+2025-08-07 20:10:00,358 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 20:10:05,967 - app.database - ERROR - Database operation failed: database is locked
+2025-08-07 20:10:05,967 - app.database - ERROR - Database operation failed: database is locked
+2025-08-07 20:10:05,968 - __main__ - ERROR - Database storage error: database is locked
+2025-08-07 20:10:05,968 - __main__ - ERROR - Failed to store idea in database
+2025-08-07 20:10:05,971 - app.database - ERROR - Generation attempt logged: success=False, time=33.246423959732056s, idea_id=None
+2025-08-07 20:14:38,852 - __main__ - INFO - Starting daily idea generation
+2025-08-07 20:14:38,852 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 20:14:38,852 - __main__ - INFO - Prompt constructed
+2025-08-07 20:15:07,675 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 20:15:07,675 - __main__ - INFO - Successfully parsed idea: CareCircle - Family Health Coordination Platform
+2025-08-07 20:15:07,675 - __main__ - INFO - Idea structure validation passed
+2025-08-07 20:15:07,675 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 20:15:07,675 - __main__ - INFO - Attempting to store idea in database (attempt 1/3)
+2025-08-07 20:15:13,268 - app.database - ERROR - Database operation failed: database is locked
+2025-08-07 20:15:13,268 - app.database - ERROR - Database operation failed: database is locked
+2025-08-07 20:15:13,268 - __main__ - WARNING - Database locked on attempt 1, waiting 2s...
+2025-08-07 20:15:15,273 - __main__ - INFO - Attempting to store idea in database (attempt 2/3)
+2025-08-07 20:15:20,925 - app.database - ERROR - Database operation failed: database is locked
+2025-08-07 20:15:20,925 - app.database - ERROR - Database operation failed: database is locked
+2025-08-07 20:15:20,932 - __main__ - WARNING - Database locked on attempt 2, waiting 4s...
+2025-08-07 20:15:24,935 - __main__ - INFO - Attempting to store idea in database (attempt 3/3)
+2025-08-07 20:15:30,517 - app.database - ERROR - Database operation failed: database is locked
+2025-08-07 20:15:30,517 - app.database - ERROR - Database operation failed: database is locked
+2025-08-07 20:15:30,517 - __main__ - WARNING - Database locked on attempt 3, waiting 8s...
+2025-08-07 20:15:30,517 - __main__ - ERROR - Failed to store idea after all retry attempts
+2025-08-07 20:15:30,517 - __main__ - ERROR - Failed to store idea in database
+2025-08-07 20:15:30,528 - app.database - ERROR - Generation attempt logged: success=False, time=51.66541767120361s, idea_id=None
+2025-08-07 20:15:53,195 - __main__ - INFO - Starting daily idea generation
+2025-08-07 20:15:53,195 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 20:15:53,195 - __main__ - INFO - Prompt constructed
+2025-08-07 20:16:19,327 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 20:16:19,327 - __main__ - INFO - Successfully parsed idea: CarbonSync
+2025-08-07 20:16:19,328 - __main__ - INFO - Idea structure validation passed
+2025-08-07 20:16:19,328 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 20:16:19,328 - __main__ - INFO - Attempting to store idea in database (attempt 1/3)
+2025-08-07 20:16:24,996 - app.database - ERROR - Database operation failed: database is locked
+2025-08-07 20:16:24,996 - app.database - ERROR - Database operation failed: database is locked
+2025-08-07 20:16:24,998 - __main__ - WARNING - Database locked on attempt 1, waiting 2s...
+2025-08-07 20:16:27,010 - __main__ - INFO - Attempting to store idea in database (attempt 2/3)
+2025-08-07 20:16:32,703 - app.database - ERROR - Database operation failed: database is locked
+2025-08-07 20:16:32,705 - app.database - ERROR - Database operation failed: database is locked
+2025-08-07 20:16:32,706 - __main__ - WARNING - Database locked on attempt 2, waiting 4s...
+2025-08-07 20:16:36,721 - __main__ - INFO - Attempting to store idea in database (attempt 3/3)
+2025-08-07 20:16:42,403 - app.database - ERROR - Database operation failed: database is locked
+2025-08-07 20:16:42,403 - app.database - ERROR - Database operation failed: database is locked
+2025-08-07 20:16:42,406 - __main__ - WARNING - Database locked on attempt 3, waiting 8s...
+2025-08-07 20:16:42,407 - __main__ - ERROR - Failed to store idea after all retry attempts
+2025-08-07 20:16:42,407 - __main__ - ERROR - Failed to store idea in database
+2025-08-07 20:16:42,407 - app.database - ERROR - Generation attempt logged: success=False, time=49.211503982543945s, idea_id=None
+2025-08-07 20:17:27,689 - __main__ - INFO - Starting daily idea generation
+2025-08-07 20:17:27,689 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 20:17:27,689 - __main__ - INFO - Prompt constructed
+2025-08-07 20:17:51,060 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 20:17:51,060 - __main__ - INFO - Successfully parsed idea: CarbonSync
+2025-08-07 20:17:51,060 - __main__ - INFO - Idea structure validation passed
+2025-08-07 20:17:51,060 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 20:17:51,060 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-07 20:17:51,076 - __main__ - INFO - Successfully stored idea with ID 2
+2025-08-07 20:17:51,076 - __main__ - INFO - Successfully generated and stored idea 2: CarbonSync
+2025-08-07 20:17:51,087 - app.database - INFO - Generation attempt logged: success=True, time=23.3869891166687s, idea_id=2
+2025-08-07 20:18:17,403 - __main__ - INFO - Starting daily idea generation
+2025-08-07 20:18:17,403 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 20:18:17,403 - __main__ - INFO - Prompt constructed
+2025-08-07 20:18:37,370 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 20:18:37,370 - __main__ - INFO - Successfully parsed idea: FlexSpace - Dynamic Workspace Marketplace
+2025-08-07 20:18:37,370 - __main__ - INFO - Idea structure validation passed
+2025-08-07 20:18:37,370 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 20:18:37,370 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-07 20:18:37,385 - __main__ - INFO - Successfully stored idea with ID 3
+2025-08-07 20:18:37,385 - __main__ - INFO - Successfully generated and stored idea 3: FlexSpace - Dynamic Workspace Marketplace
+2025-08-07 20:18:37,404 - app.database - INFO - Generation attempt logged: success=True, time=19.982323169708252s, idea_id=3
+2025-08-07 20:21:04,780 - __main__ - INFO - Starting daily idea generation
+2025-08-07 20:21:04,780 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 20:21:04,780 - __main__ - INFO - Prompt constructed
+2025-08-07 20:21:30,532 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 20:21:30,532 - __main__ - INFO - Successfully parsed idea: FlexiShift - Dynamic Gig Work Optimizer
+2025-08-07 20:21:30,532 - __main__ - INFO - Idea structure validation passed
+2025-08-07 20:21:30,532 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 20:21:30,532 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-07 20:21:30,553 - __main__ - INFO - Successfully stored idea with ID 4
+2025-08-07 20:21:30,562 - __main__ - INFO - Successfully generated and stored idea 4: FlexiShift - Dynamic Gig Work Optimizer
+2025-08-07 20:21:30,566 - app.database - INFO - Generation attempt logged: success=True, time=25.782428979873657s, idea_id=4
+2025-08-07 20:21:46,258 - __main__ - INFO - Starting daily idea generation
+2025-08-07 20:21:46,259 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 20:21:46,259 - __main__ - INFO - Prompt constructed
+2025-08-07 20:22:05,439 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 20:22:05,439 - __main__ - INFO - Successfully parsed idea: CarbonSync
+2025-08-07 20:22:05,439 - __main__ - INFO - Idea structure validation passed
+2025-08-07 20:22:05,439 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 20:22:05,439 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-07 20:22:05,467 - __main__ - INFO - Successfully stored idea with ID 5
+2025-08-07 20:22:05,471 - __main__ - INFO - Successfully generated and stored idea 5: CarbonSync
+2025-08-07 20:22:05,476 - app.database - INFO - Generation attempt logged: success=True, time=19.212257623672485s, idea_id=5
+2025-08-07 20:23:43,339 - __main__ - INFO - Starting daily idea generation
+2025-08-07 20:23:43,339 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 20:23:43,339 - __main__ - INFO - Prompt constructed
+2025-08-07 20:24:08,969 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 20:24:08,969 - __main__ - INFO - Successfully parsed idea: VoiceVault - AI Voice Authentication & Digital Identity
+2025-08-07 20:24:08,969 - __main__ - INFO - Idea structure validation passed
+2025-08-07 20:24:08,969 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 20:24:08,969 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-07 20:24:08,985 - __main__ - INFO - Successfully stored idea with ID 6
+2025-08-07 20:24:09,001 - __main__ - INFO - Successfully generated and stored idea 6: VoiceVault - AI Voice Authentication & Digital Identity
+2025-08-07 20:24:09,001 - app.database - INFO - Generation attempt logged: success=True, time=25.66218590736389s, idea_id=6
+2025-08-07 20:24:35,195 - __main__ - INFO - Starting daily idea generation
+2025-08-07 20:24:35,195 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 20:24:35,197 - __main__ - INFO - Prompt constructed
+2025-08-07 20:24:59,252 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 20:24:59,252 - __main__ - INFO - Successfully parsed idea: MindMentor - AI-Powered Cognitive Skill Development Platform
+2025-08-07 20:24:59,252 - __main__ - INFO - Idea structure validation passed
+2025-08-07 20:24:59,252 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 20:24:59,252 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-07 20:24:59,252 - __main__ - INFO - Successfully stored idea with ID 7
+2025-08-07 20:24:59,267 - __main__ - INFO - Successfully generated and stored idea 7: MindMentor - AI-Powered Cognitive Skill Development Platform
+2025-08-07 20:24:59,273 - app.database - INFO - Generation attempt logged: success=True, time=24.0723979473114s, idea_id=7
+2025-08-07 20:28:01,072 - __main__ - INFO - Starting daily idea generation
+2025-08-07 20:28:01,073 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 20:28:01,075 - __main__ - INFO - Prompt constructed
+2025-08-07 20:28:22,793 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 20:28:22,793 - __main__ - INFO - Successfully parsed idea: SleepSync - AI Sleep Optimization Platform
+2025-08-07 20:28:22,793 - __main__ - INFO - Idea structure validation passed
+2025-08-07 20:28:22,793 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 20:28:22,793 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-07 20:28:22,809 - __main__ - INFO - Successfully stored idea with ID 8
+2025-08-07 20:28:22,825 - __main__ - INFO - Successfully generated and stored idea 8: SleepSync - AI Sleep Optimization Platform
+2025-08-07 20:28:22,828 - app.database - INFO - Generation attempt logged: success=True, time=21.752767086029053s, idea_id=8
+2025-08-07 20:34:17,368 - __main__ - INFO - Starting daily idea generation
+2025-08-07 20:34:17,368 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 20:34:17,368 - __main__ - INFO - Prompt constructed
+2025-08-07 20:34:39,902 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 20:34:39,902 - __main__ - INFO - Successfully parsed idea: PetCareAI - Intelligent Pet Health & Behavior Companion
+2025-08-07 20:34:39,902 - __main__ - INFO - Idea structure validation passed
+2025-08-07 20:34:39,902 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 20:34:39,902 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-07 20:34:39,921 - __main__ - INFO - Successfully stored idea with ID 9
+2025-08-07 20:34:39,934 - __main__ - INFO - Successfully generated and stored idea 9: PetCareAI - Intelligent Pet Health & Behavior Companion
+2025-08-07 20:34:39,934 - app.database - INFO - Generation attempt logged: success=True, time=22.56672716140747s, idea_id=9
+2025-08-07 20:35:27,720 - __main__ - INFO - Starting daily idea generation
+2025-08-07 20:35:27,720 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 20:35:27,724 - __main__ - INFO - Prompt constructed
+2025-08-07 20:35:47,914 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 20:35:47,926 - __main__ - INFO - Successfully parsed idea: FoodTrace - AI Supply Chain Transparency Platform
+2025-08-07 20:35:47,926 - __main__ - INFO - Idea structure validation passed
+2025-08-07 20:35:47,926 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 20:35:47,926 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-07 20:35:47,926 - __main__ - INFO - Successfully stored idea with ID 10
+2025-08-07 20:35:47,926 - __main__ - INFO - Successfully generated and stored idea 10: FoodTrace - AI Supply Chain Transparency Platform
+2025-08-07 20:35:47,942 - app.database - INFO - Generation attempt logged: success=True, time=20.206007480621338s, idea_id=10
+2025-08-07 20:41:23,605 - __main__ - INFO - Starting daily idea generation
+2025-08-07 20:41:23,605 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 20:41:23,605 - __main__ - INFO - Prompt constructed
+2025-08-07 20:41:25,230 - __main__ - ERROR - Claude CLI failed with return code 1: 
+2025-08-07 20:41:25,230 - __main__ - ERROR - Claude CLI execution failed
+2025-08-07 20:41:25,230 - app.database - ERROR - Generation attempt logged: success=False, time=1.6253468990325928s, idea_id=None
+2025-08-07 20:41:25,230 - __main__ - INFO - Starting retry generation (max 3 attempts)
+2025-08-07 20:41:25,230 - __main__ - INFO - Retry attempt 1/3
+2025-08-07 20:41:26,554 - __main__ - ERROR - Claude CLI failed with return code 1: 
+2025-08-07 20:41:26,554 - __main__ - WARNING - Retry attempt 1 failed - no response from Claude CLI
+2025-08-07 20:41:26,554 - __main__ - INFO - Retry attempt 2/3
+2025-08-07 20:41:27,837 - __main__ - ERROR - Claude CLI failed with return code 1: 
+2025-08-07 20:41:27,837 - __main__ - WARNING - Retry attempt 2 failed - no response from Claude CLI
+2025-08-07 20:41:27,837 - __main__ - INFO - Retry attempt 3/3
+2025-08-07 20:41:29,242 - __main__ - ERROR - Claude CLI failed with return code 1: 
+2025-08-07 20:41:29,242 - __main__ - WARNING - Retry attempt 3 failed - no response from Claude CLI
+2025-08-07 20:41:29,242 - __main__ - ERROR - All 3 retry attempts failed
+2025-08-07 23:34:23,985 - __main__ - INFO - Starting daily idea generation
+2025-08-07 23:34:23,985 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 23:34:23,985 - __main__ - INFO - Prompt constructed
+2025-08-07 23:34:47,912 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 23:34:47,912 - __main__ - INFO - Successfully parsed idea: WasteWise - AI Food Waste Prevention Assistant
+2025-08-07 23:34:47,912 - __main__ - INFO - Idea structure validation passed
+2025-08-07 23:34:47,915 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 23:34:47,915 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-07 23:34:47,937 - __main__ - INFO - Successfully stored idea with ID 11
+2025-08-07 23:34:47,937 - __main__ - INFO - Successfully generated and stored idea 11: WasteWise - AI Food Waste Prevention Assistant
+2025-08-07 23:34:47,945 - app.database - INFO - Generation attempt logged: success=True, time=23.952247858047485s, idea_id=11
+2025-08-07 23:36:11,715 - __main__ - INFO - Starting daily idea generation
+2025-08-07 23:36:11,715 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 23:36:11,717 - __main__ - INFO - Prompt constructed
+2025-08-07 23:36:36,701 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 23:36:36,701 - __main__ - INFO - Successfully parsed idea: CultivateMind - AI Mental Health Crisis Prevention
+2025-08-07 23:36:36,701 - __main__ - INFO - Idea structure validation passed
+2025-08-07 23:36:36,701 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 23:36:36,701 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-07 23:36:36,721 - __main__ - INFO - Successfully stored idea with ID 12
+2025-08-07 23:36:36,728 - __main__ - INFO - Successfully generated and stored idea 12: CultivateMind - AI Mental Health Crisis Prevention
+2025-08-07 23:36:36,739 - app.database - INFO - Generation attempt logged: success=True, time=25.013497591018677s, idea_id=12
+2025-08-07 23:38:02,868 - __main__ - INFO - Starting daily idea generation
+2025-08-07 23:38:02,868 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 23:38:02,872 - __main__ - INFO - Prompt constructed
+2025-08-07 23:38:31,763 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 23:38:31,763 - __main__ - INFO - Successfully parsed idea: HyperLocal - Neighborhood Commerce & Community Platform
+2025-08-07 23:38:31,763 - __main__ - INFO - Idea structure validation passed
+2025-08-07 23:38:31,763 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 23:38:31,763 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-07 23:38:31,794 - __main__ - INFO - Successfully stored idea with ID 13
+2025-08-07 23:38:31,800 - __main__ - INFO - Successfully generated and stored idea 13: HyperLocal - Neighborhood Commerce & Community Platform
+2025-08-07 23:38:31,806 - app.database - INFO - Generation attempt logged: success=True, time=28.926170587539673s, idea_id=13
+2025-08-07 23:38:44,867 - __main__ - INFO - Starting daily idea generation
+2025-08-07 23:38:44,867 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 23:38:44,870 - __main__ - INFO - Prompt constructed
+2025-08-07 23:39:08,096 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 23:39:08,096 - __main__ - INFO - Successfully parsed idea: TimeFlow - AI-Powered Life Planning & Decision Assistant
+2025-08-07 23:39:08,096 - __main__ - INFO - Idea structure validation passed
+2025-08-07 23:39:08,096 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 23:39:08,096 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-07 23:39:08,122 - __main__ - INFO - Successfully stored idea with ID 14
+2025-08-07 23:39:08,127 - __main__ - INFO - Successfully generated and stored idea 14: TimeFlow - AI-Powered Life Planning & Decision Assistant
+2025-08-07 23:39:08,127 - app.database - INFO - Generation attempt logged: success=True, time=23.25947594642639s, idea_id=14
+2025-08-07 23:39:21,197 - __main__ - INFO - Starting daily idea generation
+2025-08-07 23:39:21,197 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 23:39:21,202 - __main__ - INFO - Prompt constructed
+2025-08-07 23:39:44,976 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 23:39:44,976 - __main__ - INFO - Successfully parsed idea: SkillBridge - AI-Powered Career Transition Platform
+2025-08-07 23:39:44,984 - __main__ - INFO - Idea structure validation passed
+2025-08-07 23:39:44,984 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 23:39:44,984 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-07 23:39:45,008 - __main__ - INFO - Successfully stored idea with ID 15
+2025-08-07 23:39:45,015 - __main__ - INFO - Successfully generated and stored idea 15: SkillBridge - AI-Powered Career Transition Platform
+2025-08-07 23:39:45,019 - app.database - INFO - Generation attempt logged: success=True, time=23.818727493286133s, idea_id=15
+2025-08-07 23:40:25,374 - __main__ - INFO - Starting daily idea generation
+2025-08-07 23:40:25,374 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 23:40:25,383 - __main__ - INFO - Prompt constructed
+2025-08-07 23:40:50,005 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 23:40:50,005 - __main__ - INFO - Successfully parsed idea: AquaGuard - Smart Water Quality & Conservation Network
+2025-08-07 23:40:50,005 - __main__ - INFO - Idea structure validation passed
+2025-08-07 23:40:50,005 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 23:40:50,005 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-07 23:40:50,032 - __main__ - INFO - Successfully stored idea with ID 16
+2025-08-07 23:40:50,037 - __main__ - INFO - Successfully generated and stored idea 16: AquaGuard - Smart Water Quality & Conservation Network
+2025-08-07 23:40:50,040 - app.database - INFO - Generation attempt logged: success=True, time=24.66216254234314s, idea_id=16
+2025-08-07 23:41:45,258 - __main__ - INFO - Starting daily idea generation
+2025-08-07 23:41:45,258 - __main__ - INFO - Methodology loaded successfully
+2025-08-07 23:41:45,261 - __main__ - INFO - Prompt constructed
+2025-08-07 23:42:09,901 - __main__ - INFO - Claude CLI executed successfully
+2025-08-07 23:42:09,901 - __main__ - INFO - Successfully parsed idea: NeuroLearn - AI-Powered Learning Disability Support Platform
+2025-08-07 23:42:09,901 - __main__ - INFO - Idea structure validation passed
+2025-08-07 23:42:09,901 - __main__ - INFO - Idea enhanced with metadata
+2025-08-07 23:42:09,901 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-07 23:42:09,919 - __main__ - INFO - Successfully stored idea with ID 17
+2025-08-07 23:42:09,922 - __main__ - INFO - Successfully generated and stored idea 17: NeuroLearn - AI-Powered Learning Disability Support Platform
+2025-08-07 23:42:09,932 - app.database - INFO - Generation attempt logged: success=True, time=24.663938999176025s, idea_id=17
+2025-08-08 09:52:39,567 - __main__ - INFO - Starting daily idea generation
+2025-08-08 09:52:39,583 - __main__ - INFO - Methodology loaded successfully
+2025-08-08 09:52:39,584 - __main__ - INFO - Prompt constructed
+2025-08-08 09:53:06,540 - __main__ - INFO - Claude CLI executed successfully
+2025-08-08 09:53:06,540 - __main__ - INFO - Successfully parsed idea: CivicConnect - AI-Powered Local Government Engagement Platform
+2025-08-08 09:53:06,540 - __main__ - INFO - Idea structure validation passed
+2025-08-08 09:53:06,540 - __main__ - INFO - Idea enhanced with metadata
+2025-08-08 09:53:06,540 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-08 09:53:06,564 - __main__ - INFO - Successfully stored idea with ID 18
+2025-08-08 09:53:06,572 - __main__ - INFO - Successfully generated and stored idea 18: CivicConnect - AI-Powered Local Government Engagement Platform
+2025-08-08 09:53:06,580 - app.database - INFO - Generation attempt logged: success=True, time=27.0044105052948s, idea_id=18
+2025-08-08 10:03:53,683 - __main__ - INFO - Starting daily idea generation
+2025-08-08 10:03:53,683 - __main__ - INFO - Methodology loaded successfully
+2025-08-08 10:03:53,683 - __main__ - INFO - Prompt constructed
+2025-08-08 10:04:14,875 - __main__ - INFO - Claude CLI executed successfully
+2025-08-08 10:04:14,875 - __main__ - INFO - Successfully parsed idea: TrustChain - Blockchain-Powered Service Provider Verification
+2025-08-08 10:04:14,875 - __main__ - INFO - Idea structure validation passed
+2025-08-08 10:04:14,875 - __main__ - INFO - Idea enhanced with metadata
+2025-08-08 10:04:14,875 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-08 10:04:14,899 - __main__ - INFO - Successfully stored idea with ID 19
+2025-08-08 10:04:14,899 - __main__ - INFO - Successfully generated and stored idea 19: TrustChain - Blockchain-Powered Service Provider Verification
+2025-08-08 10:04:14,907 - app.database - INFO - Generation attempt logged: success=True, time=21.216776371002197s, idea_id=19
+2025-08-08 10:05:14,193 - __main__ - INFO - Starting daily idea generation
+2025-08-08 10:05:14,193 - __main__ - INFO - Methodology loaded successfully
+2025-08-08 10:05:14,194 - __main__ - INFO - Prompt constructed
+2025-08-08 10:05:41,207 - __main__ - INFO - Claude CLI executed successfully
+2025-08-08 10:05:41,207 - __main__ - INFO - Successfully parsed idea: MemoryKeeper - AI-Powered Family Legacy & Memory Platform
+2025-08-08 10:05:41,207 - __main__ - INFO - Idea structure validation passed
+2025-08-08 10:05:41,207 - __main__ - INFO - Idea enhanced with metadata
+2025-08-08 10:05:41,207 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-08 10:05:41,219 - __main__ - INFO - Successfully stored idea with ID 20
+2025-08-08 10:05:41,235 - __main__ - INFO - Successfully generated and stored idea 20: MemoryKeeper - AI-Powered Family Legacy & Memory Platform
+2025-08-08 10:05:41,240 - app.database - INFO - Generation attempt logged: success=True, time=27.042572021484375s, idea_id=20
+2025-08-08 10:06:13,770 - __main__ - INFO - Starting daily idea generation
+2025-08-08 10:06:13,770 - __main__ - INFO - Methodology loaded successfully
+2025-08-08 10:06:13,775 - __main__ - INFO - Prompt constructed
+2025-08-08 10:06:39,053 - __main__ - INFO - Claude CLI executed successfully
+2025-08-08 10:06:39,053 - __main__ - INFO - Successfully parsed idea: MicroFarm - Urban Vertical Farming Network
+2025-08-08 10:06:39,053 - __main__ - INFO - Idea structure validation passed
+2025-08-08 10:06:39,053 - __main__ - INFO - Idea enhanced with metadata
+2025-08-08 10:06:39,053 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-08 10:06:39,069 - __main__ - INFO - Successfully stored idea with ID 21
+2025-08-08 10:06:39,079 - __main__ - INFO - Successfully generated and stored idea 21: MicroFarm - Urban Vertical Farming Network
+2025-08-08 10:06:39,084 - app.database - INFO - Generation attempt logged: success=True, time=25.308851957321167s, idea_id=21
+2025-08-08 10:07:11,394 - __main__ - INFO - Starting daily idea generation
+2025-08-08 10:07:11,394 - __main__ - INFO - Methodology loaded successfully
+2025-08-08 10:07:11,394 - __main__ - INFO - Prompt constructed
+2025-08-08 10:08:04,522 - __main__ - INFO - Claude CLI executed successfully
+2025-08-08 10:08:04,523 - __main__ - INFO - Successfully parsed idea: SoundScape - AI Audio Environment Designer
+2025-08-08 10:08:04,523 - __main__ - INFO - Idea structure validation passed
+2025-08-08 10:08:04,523 - __main__ - INFO - Idea enhanced with metadata
+2025-08-08 10:08:04,523 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-08 10:08:04,546 - __main__ - INFO - Successfully stored idea with ID 22
+2025-08-08 10:08:04,554 - __main__ - INFO - Successfully generated and stored idea 22: SoundScape - AI Audio Environment Designer
+2025-08-08 10:08:04,557 - app.database - INFO - Generation attempt logged: success=True, time=53.15447115898132s, idea_id=22
+2025-08-08 10:13:20,754 - __main__ - INFO - Starting daily idea generation
+2025-08-08 10:13:20,754 - __main__ - INFO - Methodology loaded successfully
+2025-08-08 10:13:20,754 - __main__ - INFO - Prompt constructed
+2025-08-08 10:13:46,399 - __main__ - INFO - Claude CLI executed successfully
+2025-08-08 10:13:46,399 - __main__ - INFO - Successfully parsed idea: CarbonCredit - Personal Carbon Trading Platform
+2025-08-08 10:13:46,399 - __main__ - INFO - Idea structure validation passed
+2025-08-08 10:13:46,399 - __main__ - INFO - Idea enhanced with metadata
+2025-08-08 10:13:46,399 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-08 10:13:46,406 - __main__ - INFO - Successfully stored idea with ID 23
+2025-08-08 10:13:46,411 - __main__ - INFO - Successfully generated and stored idea 23: CarbonCredit - Personal Carbon Trading Platform
+2025-08-08 10:13:46,417 - app.database - INFO - Generation attempt logged: success=True, time=25.657793521881104s, idea_id=23
+2025-08-08 10:14:04,431 - __main__ - INFO - Starting daily idea generation
+2025-08-08 10:14:04,431 - __main__ - INFO - Methodology loaded successfully
+2025-08-08 10:14:04,432 - __main__ - INFO - Prompt constructed
+2025-08-08 10:14:31,505 - __main__ - INFO - Claude CLI executed successfully
+2025-08-08 10:14:31,505 - __main__ - INFO - Successfully parsed idea: PropPredict - AI Property Investment Intelligence Platform
+2025-08-08 10:14:31,507 - __main__ - INFO - Idea structure validation passed
+2025-08-08 10:14:31,507 - __main__ - INFO - Idea enhanced with metadata
+2025-08-08 10:14:31,507 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-08 10:14:31,512 - __main__ - INFO - Successfully stored idea with ID 24
+2025-08-08 10:14:31,519 - __main__ - INFO - Successfully generated and stored idea 24: PropPredict - AI Property Investment Intelligence Platform
+2025-08-08 10:14:31,522 - app.database - INFO - Generation attempt logged: success=True, time=27.087244033813477s, idea_id=24
+2025-08-08 10:15:49,066 - __main__ - INFO - Starting daily idea generation
+2025-08-08 10:15:49,066 - __main__ - INFO - Methodology loaded successfully
+2025-08-08 10:15:49,066 - __main__ - INFO - Prompt constructed
+2025-08-08 10:16:12,087 - __main__ - INFO - Claude CLI executed successfully
+2025-08-08 10:16:12,087 - __main__ - INFO - Successfully parsed idea: FleetSync - AI Fleet Management for Small Business
+2025-08-08 10:16:12,087 - __main__ - INFO - Idea structure validation passed
+2025-08-08 10:16:12,087 - __main__ - INFO - Idea enhanced with metadata
+2025-08-08 10:16:12,087 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-08 10:16:12,093 - __main__ - INFO - Successfully stored idea with ID 25
+2025-08-08 10:16:12,103 - __main__ - INFO - Successfully generated and stored idea 25: FleetSync - AI Fleet Management for Small Business
+2025-08-08 10:16:12,103 - app.database - INFO - Generation attempt logged: success=True, time=23.036556005477905s, idea_id=25
+2025-08-08 10:16:44,385 - __main__ - INFO - Starting daily idea generation
+2025-08-08 10:16:44,385 - __main__ - INFO - Methodology loaded successfully
+2025-08-08 10:16:44,385 - __main__ - INFO - Prompt constructed
+2025-08-08 10:17:09,750 - __main__ - INFO - Claude CLI executed successfully
+2025-08-08 10:17:09,750 - __main__ - INFO - Successfully parsed idea: ElderLink - AI Senior Care Coordination Platform
+2025-08-08 10:17:09,750 - __main__ - INFO - Idea structure validation passed
+2025-08-08 10:17:09,750 - __main__ - INFO - Idea enhanced with metadata
+2025-08-08 10:17:09,750 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-08 10:17:09,777 - __main__ - INFO - Successfully stored idea with ID 26
+2025-08-08 10:17:09,780 - __main__ - INFO - Successfully generated and stored idea 26: ElderLink - AI Senior Care Coordination Platform
+2025-08-08 10:17:09,785 - app.database - INFO - Generation attempt logged: success=True, time=25.394476175308228s, idea_id=26
+2025-08-08 10:17:45,074 - __main__ - INFO - Starting daily idea generation
+2025-08-08 10:17:45,074 - __main__ - INFO - Methodology loaded successfully
+2025-08-08 10:17:45,076 - __main__ - INFO - Prompt constructed
+2025-08-08 10:18:10,786 - __main__ - INFO - Claude CLI executed successfully
+2025-08-08 10:18:10,786 - __main__ - INFO - Successfully parsed idea: CodeMentor - AI-Powered Developer Onboarding Platform
+2025-08-08 10:18:10,786 - __main__ - INFO - Idea structure validation passed
+2025-08-08 10:18:10,788 - __main__ - INFO - Idea enhanced with metadata
+2025-08-08 10:18:10,788 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-08 10:18:10,797 - __main__ - INFO - Successfully stored idea with ID 27
+2025-08-08 10:18:10,802 - __main__ - INFO - Successfully generated and stored idea 27: CodeMentor - AI-Powered Developer Onboarding Platform
+2025-08-08 10:18:10,804 - app.database - INFO - Generation attempt logged: success=True, time=25.727914571762085s, idea_id=27
+2025-08-08 10:19:27,381 - __main__ - INFO - Starting daily idea generation
+2025-08-08 10:19:27,381 - __main__ - INFO - Methodology loaded successfully
+2025-08-08 10:19:27,381 - __main__ - INFO - Prompt constructed
+2025-08-08 10:19:51,336 - __main__ - INFO - Claude CLI executed successfully
+2025-08-08 10:19:51,336 - __main__ - INFO - Successfully parsed idea: ClimateShield - Personal Environmental Risk Intelligence
+2025-08-08 10:19:51,336 - __main__ - INFO - Idea structure validation passed
+2025-08-08 10:19:51,336 - __main__ - INFO - Idea enhanced with metadata
+2025-08-08 10:19:51,336 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-08 10:19:51,352 - __main__ - INFO - Successfully stored idea with ID 28
+2025-08-08 10:19:51,352 - __main__ - INFO - Successfully generated and stored idea 28: ClimateShield - Personal Environmental Risk Intelligence
+2025-08-08 10:19:51,352 - app.database - INFO - Generation attempt logged: success=True, time=23.971511602401733s, idea_id=28
+2025-08-08 10:20:37,200 - __main__ - INFO - Starting daily idea generation
+2025-08-08 10:20:37,200 - __main__ - INFO - Methodology loaded successfully
+2025-08-08 10:20:37,205 - __main__ - INFO - Prompt constructed
+2025-08-08 10:21:02,744 - __main__ - INFO - Claude CLI executed successfully
+2025-08-08 10:21:02,744 - __main__ - INFO - Successfully parsed idea: VoiceVault - AI Voice Banking & Identity Security Platform
+2025-08-08 10:21:02,744 - __main__ - INFO - Idea structure validation passed
+2025-08-08 10:21:02,744 - __main__ - INFO - Idea enhanced with metadata
+2025-08-08 10:21:02,744 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-08 10:21:02,761 - __main__ - INFO - Successfully stored idea with ID 29
+2025-08-08 10:21:02,761 - __main__ - INFO - Successfully generated and stored idea 29: VoiceVault - AI Voice Banking & Identity Security Platform
+2025-08-08 10:21:02,761 - app.database - INFO - Generation attempt logged: success=True, time=25.56091833114624s, idea_id=29
+2025-08-08 10:21:29,275 - __main__ - INFO - Starting daily idea generation
+2025-08-08 10:21:29,275 - __main__ - INFO - Methodology loaded successfully
+2025-08-08 10:21:29,275 - __main__ - INFO - Prompt constructed
+2025-08-08 10:21:56,148 - __main__ - INFO - Claude CLI executed successfully
+2025-08-08 10:21:56,148 - __main__ - INFO - Successfully parsed idea: PetMind - AI Pet Behavioral Health & Training Platform
+2025-08-08 10:21:56,148 - __main__ - INFO - Idea structure validation passed
+2025-08-08 10:21:56,148 - __main__ - INFO - Idea enhanced with metadata
+2025-08-08 10:21:56,148 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-08 10:21:56,161 - __main__ - INFO - Successfully stored idea with ID 30
+2025-08-08 10:21:56,161 - __main__ - INFO - Successfully generated and stored idea 30: PetMind - AI Pet Behavioral Health & Training Platform
+2025-08-08 10:21:56,161 - app.database - INFO - Generation attempt logged: success=True, time=26.885379791259766s, idea_id=30
+2025-08-08 10:22:45,351 - __main__ - INFO - Starting daily idea generation
+2025-08-08 10:22:45,351 - __main__ - INFO - Methodology loaded successfully
+2025-08-08 10:22:45,353 - __main__ - INFO - Prompt constructed
+2025-08-08 10:23:12,524 - __main__ - INFO - Claude CLI executed successfully
+2025-08-08 10:23:12,524 - __main__ - INFO - Successfully parsed idea: FoodRescue - AI Food Waste Prevention & Recovery Network
+2025-08-08 10:23:12,524 - __main__ - INFO - Idea structure validation passed
+2025-08-08 10:23:12,524 - __main__ - INFO - Idea enhanced with metadata
+2025-08-08 10:23:12,524 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-08 10:23:12,540 - __main__ - INFO - Successfully stored idea with ID 31
+2025-08-08 10:23:12,540 - __main__ - INFO - Successfully generated and stored idea 31: FoodRescue - AI Food Waste Prevention & Recovery Network
+2025-08-08 10:23:12,540 - app.database - INFO - Generation attempt logged: success=True, time=27.188621044158936s, idea_id=31
+2025-08-08 10:23:42,312 - __main__ - INFO - Starting daily idea generation
+2025-08-08 10:23:42,312 - __main__ - INFO - Methodology loaded successfully
+2025-08-08 10:23:42,312 - __main__ - INFO - Prompt constructed
+2025-08-08 10:24:07,327 - __main__ - INFO - Claude CLI executed successfully
+2025-08-08 10:24:07,327 - __main__ - INFO - Successfully parsed idea: RecallRx - AI Medication Adherence & Safety Network
+2025-08-08 10:24:07,327 - __main__ - INFO - Idea structure validation passed
+2025-08-08 10:24:07,327 - __main__ - INFO - Idea enhanced with metadata
+2025-08-08 10:24:07,327 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-08 10:24:07,347 - __main__ - INFO - Successfully stored idea with ID 32
+2025-08-08 10:24:07,347 - __main__ - INFO - Successfully generated and stored idea 32: RecallRx - AI Medication Adherence & Safety Network
+2025-08-08 10:24:07,359 - app.database - INFO - Generation attempt logged: success=True, time=25.03415322303772s, idea_id=32
+2025-08-08 10:25:00,791 - __main__ - INFO - Starting daily idea generation
+2025-08-08 10:25:00,791 - __main__ - INFO - Methodology loaded successfully
+2025-08-08 10:25:00,791 - __main__ - INFO - Prompt constructed
+2025-08-08 10:25:28,805 - __main__ - INFO - Claude CLI executed successfully
+2025-08-08 10:25:28,805 - __main__ - INFO - Successfully parsed idea: CulturalBridge - AI-Powered Cross-Cultural Workplace Integration
+2025-08-08 10:25:28,805 - __main__ - INFO - Idea structure validation passed
+2025-08-08 10:25:28,805 - __main__ - INFO - Idea enhanced with metadata
+2025-08-08 10:25:28,805 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-08 10:25:28,821 - __main__ - INFO - Successfully stored idea with ID 33
+2025-08-08 10:25:28,821 - __main__ - INFO - Successfully generated and stored idea 33: CulturalBridge - AI-Powered Cross-Cultural Workplace Integration
+2025-08-08 10:25:28,821 - app.database - INFO - Generation attempt logged: success=True, time=28.03067708015442s, idea_id=33
+2025-08-08 11:26:37,099 - __main__ - INFO - Starting daily idea generation
+2025-08-08 11:26:37,099 - __main__ - INFO - Methodology loaded successfully
+2025-08-08 11:26:37,106 - __main__ - INFO - Prompt constructed
+2025-08-08 11:27:07,775 - __main__ - INFO - Claude CLI executed successfully
+2025-08-08 11:27:07,796 - __main__ - INFO - Successfully parsed idea: MindfulSpend - AI Emotional Spending Coach
+2025-08-08 11:27:07,796 - __main__ - INFO - Idea structure validation passed
+2025-08-08 11:27:07,796 - __main__ - INFO - Idea enhanced with metadata
+2025-08-08 11:27:07,796 - __main__ - INFO - Attempting to store idea in database (attempt 1/5)
+2025-08-08 11:27:07,806 - __main__ - INFO - Successfully stored idea with ID 34
+2025-08-08 11:27:07,806 - __main__ - INFO - Successfully generated and stored idea 34: MindfulSpend - AI Emotional Spending Coach
+2025-08-08 11:27:07,822 - app.database - INFO - Generation attempt logged: success=True, time=30.707298278808594s, idea_id=34
