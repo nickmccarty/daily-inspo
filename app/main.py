@@ -17,6 +17,8 @@ from .database import validate_database_schema
 from .models import IdeaResponse, FilterParams
 from .api.ideas import router as ideas_router
 from .api.filters import router as filters_router
+from .api.projects import router as projects_router
+from .api.chat import router as chat_router
 
 app = FastAPI(
     title="Daily Inspo API",
@@ -33,6 +35,8 @@ templates = Jinja2Templates(directory="templates")
 # Include API routers
 app.include_router(ideas_router, prefix="/api/ideas", tags=["ideas"])
 app.include_router(filters_router, prefix="/api/filters", tags=["filters"])
+app.include_router(projects_router, tags=["projects"])
+app.include_router(chat_router, tags=["chat"])
 
 
 @app.get("/", response_class=HTMLResponse)

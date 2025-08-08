@@ -88,6 +88,21 @@
             <button id="next-page" class="pagination__btn" disabled>Next &rarr;</button>
         </div>
 
+        <!-- Project Management Section -->
+        <section class="projects-section">
+            <div class="projects-header">
+                <h2>Connected Projects</h2>
+                <button id="create-project-btn" class="btn btn--primary">Create Project</button>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Project cards will be populated by JavaScript -->
+            </div>
+            <div id="projects-empty-state" class="empty-state hidden">
+                <h3>No projects yet</h3>
+                <p>Create a project to connect your ideas to real development work.</p>
+            </div>
+        </section>
+
         <!-- Empty State -->
         <div id="empty-state" class="empty-state hidden">
             <h2>No ideas found</h2>
@@ -111,6 +126,216 @@
         </div>
     </div>
 
-    <script src="/static/js/app.js"></script>
+    <!-- Project Creation Modal -->
+    <div id="project-modal" class="modal hidden">
+        <div class="modal__backdrop"></div>
+        <div class="modal__content modal__content--wide">
+            <div class="modal__header">
+                <h2 class="modal__title">Create New Project</h2>
+                <button class="modal__close" onclick="window.dailyInspoApp?.hideProjectModal()">&times;</button>
+            </div>
+            <div class="modal__body">
+                <form id="project-form" class="project-form">
+                    <div class="form-group">
+                        <label for="project-name">Project Name</label>
+                        <input type="text" id="project-name" name="project-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="project-description">Description</label>
+                        <textarea id="project-description" name="project-description" required></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="project-folder">Folder Path</label>
+                        <input type="text" id="project-folder" name="project-folder" required placeholder="e.g., C:\Users\nicho\Desktop\Sandbox\claude-apps\daily-inspo-dev\test-projects\my-app">
+                    </div>
+                    <div class="form-group">
+                        <label for="project-status">Status</label>
+                        <select id="project-status" name="project-status">
+                            <option value="planning">Planning</option>
+                            <option value="development">Development</option>
+                            <option value="testing">Testing</option>
+                            <option value="completed">Completed</option>
+                            <option value="paused">Paused</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="project-repository">Repository URL (optional)</label>
+                        <input type="url" id="project-repository" name="project-repository" placeholder="https://github.com/username/repo">
+                    </div>
+                    <div class="form-group">
+                        <label>Connect Ideas</label>
+                        <div id="idea-connection-list" class="idea-connection-list">
+                            <!-- Idea checkboxes populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn--secondary" onclick="window.dailyInspoApp?.hideProjectModal()">Cancel</button>
+                        <button type="submit" class="btn btn--primary">Create Project</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chat Modal -->
+    <div id="chat-modal" class="modal hidden">
+        <div class="modal__backdrop"></div>
+        <div class="modal__content modal__content--chat">
+            <div class="modal__header">
+                <h2 class="modal__title">Claude Code Assistant</h2>
+                <div class="chat-controls">
+                    <span id="chat-project-name" class="chat-project-name"></span>
+                    <button class="modal__close" onclick="window.dailyInspoApp?.hideChatModal()">&times;</button>
+                </div>
+            </div>
+            <div class="modal__body chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Chat messages populated by JavaScript -->
+                </div>
+                <div class="chat-input-container">
+                    <div class="chat-input-wrapper">
+                        <textarea 
+                            id="chat-input" 
+                            placeholder="Ask about your project, compare it to connected ideas, or get development advice..."
+                            rows="3"
+                        ></textarea>
+                        <button id="send-message-btn" class="btn btn--primary chat-send-btn" disabled>Send</button>
+                    </div>
+                    <div class="chat-status" id="chat-status"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app-new.js"></script>
+    <script>
+        console.log('INLINE OVERRIDE: Starting override setup');
+        
+        // Wait for the main app to load, then override chat functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('INLINE OVERRIDE: DOM loaded');
+            
+            // Wait for projects to load
+            setTimeout(() => {
+                console.log('INLINE OVERRIDE: Setting up chat button override');
+                
+                // Override ALL click events on the projects grid
+                const projectsGrid = document.getElementById('projects-grid');
+                if (projectsGrid) {
+                    // Remove existing event listeners by replacing the element
+                    const newGrid = projectsGrid.cloneNode(true);
+                    projectsGrid.parentNode.replaceChild(newGrid, projectsGrid);
+                    
+                    // Add our own event listener
+                    newGrid.addEventListener('click', function(e) {
+                        console.log('INLINE OVERRIDE: Click intercepted on:', e.target);
+                        
+                        if (e.target.matches('[data-action="chat"]')) {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            
+                            const projectCard = e.target.closest('.project-card');
+                            const projectId = parseInt(projectCard.dataset.projectId);
+                            
+                            console.log('INLINE OVERRIDE: Opening chat for project:', projectId);
+                            
+                            // Open the actual chat modal
+                            openChatModalForProject(projectId);
+                        }
+                    });
+                    
+                    console.log('INLINE OVERRIDE: Event listener added to projects grid');
+                } else {
+                    console.log('INLINE OVERRIDE: Projects grid not found');
+                }
+            }, 3000); // Wait 3 seconds for everything to load
+        });
+        
+        // Chat functionality
+        function openChatModalForProject(projectId) {
+            console.log('Opening chat modal for project:', projectId);
+            
+            // Find the project data
+            const projects = window.dailyInspoApp?.projects || [];
+            const project = projects.find(p => p.id === projectId);
+            
+            if (!project) {
+                alert(`Project ${projectId} not found!`);
+                return;
+            }
+            
+            // Show the chat modal
+            const modal = document.getElementById('chat-modal');
+            const projectNameEl = document.getElementById('chat-project-name');
+            
+            if (modal && projectNameEl) {
+                projectNameEl.textContent = project.name;
+                modal.classList.remove('hidden');
+                
+                console.log('Chat modal opened for:', project.name);
+                
+                // Initialize with a welcome message
+                const messagesContainer = document.getElementById('chat-messages');
+                if (messagesContainer) {
+                    messagesContainer.innerHTML = `
+                        <div class="chat-message chat-message--assistant">
+                            <div class="chat-message__content">
+                                <div class="chat-message__text">Hello! I'm Claude Code, ready to help you with your "${project.name}" project. I can analyze your project structure, compare it to your connected ideas, and provide development guidance. What would you like to discuss?</div>
+                                <div class="chat-message__timestamp">${new Date().toLocaleTimeString()}</div>
+                            </div>
+                            <div class="chat-message__avatar">🤖</div>
+                        </div>
+                    `;
+                }
+                
+                // Set up the send button
+                const sendBtn = document.getElementById('send-message-btn');
+                const chatInput = document.getElementById('chat-input');
+                
+                if (sendBtn && chatInput) {
+                    sendBtn.onclick = function() {
+                        const message = chatInput.value.trim();
+                        if (message) {
+                            addChatMessage(message, 'user');
+                            chatInput.value = '';
+                            
+                            // Simulate Claude response
+                            setTimeout(() => {
+                                addChatMessage(`I understand you want to discuss "${message}" regarding your ${project.name} project. This is where I would provide detailed guidance about your project development!`, 'assistant');
+                            }, 1000);
+                        }
+                    };
+                    
+                    chatInput.onkeydown = function(e) {
+                        if (e.key === 'Enter' && !e.shiftKey) {
+                            e.preventDefault();
+                            sendBtn.click();
+                        }
+                    };
+                }
+            } else {
+                alert('Chat modal not found in HTML!');
+            }
+        }
+        
+        function addChatMessage(content, role) {
+            const messagesContainer = document.getElementById('chat-messages');
+            if (!messagesContainer) return;
+            
+            const isUser = role === 'user';
+            const messageHtml = `
+                <div class="chat-message ${isUser ? 'chat-message--user' : 'chat-message--assistant'}">
+                    <div class="chat-message__content">
+                        <div class="chat-message__text">${content}</div>
+                        <div class="chat-message__timestamp">${new Date().toLocaleTimeString()}</div>
+                    </div>
+                    <div class="chat-message__avatar">${isUser ? '👤' : '🤖'}</div>
+                </div>
+            `;
+            
+            messagesContainer.insertAdjacentHTML('beforeend', messageHtml);
+            messagesContainer.scrollTop = messagesContainer.scrollHeight;
+        }
+    </script>
 </body>
 </html>

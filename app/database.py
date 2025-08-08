@@ -139,6 +139,77 @@ def create_tables() -> None:
             idea_id INTEGER,
             FOREIGN KEY (idea_id) REFERENCES ideas (id)
         )
+        """,
+        """
+        CREATE TABLE IF NOT EXISTS projects (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            name TEXT NOT NULL,
+            description TEXT NOT NULL,
+            folder_path TEXT NOT NULL UNIQUE,
+            status TEXT NOT NULL DEFAULT 'planning',
+            repository_url TEXT,
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            updated_at DATETIME DEFAULT CURRENT_TIMESTAMP
+        )
+        """,
+        """
+        CREATE TABLE IF NOT EXISTS idea_projects (
+            idea_id INTEGER,
+            project_id INTEGER,
+            connection_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+            relevance_notes TEXT,
+            PRIMARY KEY (idea_id, project_id),
+            FOREIGN KEY (idea_id) REFERENCES ideas (id) ON DELETE CASCADE,
+            FOREIGN KEY (project_id) REFERENCES projects (id) ON DELETE CASCADE
+        )
+        """,
+        """
+        CREATE TABLE IF NOT EXISTS project_snapshots (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            project_id INTEGER,
+            snapshot_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+            file_count INTEGER DEFAULT 0,
+            line_count INTEGER DEFAULT 0,
+            key_files TEXT,
+            technologies_detected TEXT,
+            progress_notes TEXT,
+            FOREIGN KEY (project_id) REFERENCES projects (id) ON DELETE CASCADE
+        )
+        """,
+        """
+        CREATE TABLE IF NOT EXISTS chat_sessions (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            project_id INTEGER,
+            title TEXT NOT NULL,
+            created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (project_id) REFERENCES projects (id) ON DELETE CASCADE
+        )
+        """,
+        """
+        CREATE TABLE IF NOT EXISTS chat_messages (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            session_id INTEGER,
+            role TEXT NOT NULL,
+            content TEXT NOT NULL,
+            timestamp DATETIME DEFAULT CURRENT_TIMESTAMP,
+            FOREIGN KEY (session_id) REFERENCES chat_sessions (id) ON DELETE CASCADE
+        )
+        """,
+        """
+        CREATE TABLE IF NOT EXISTS project_analyses (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            project_id INTEGER,
+            analysis_date DATETIME DEFAULT CURRENT_TIMESTAMP,
+            idea_alignment_score REAL DEFAULT 0.0,
+            implemented_features TEXT,
+            missing_features TEXT,
+            divergent_features TEXT,
+            technical_debt_score REAL DEFAULT 0.0,
+            completion_estimate REAL DEFAULT 0.0,
+            recommendations TEXT,
+            FOREIGN KEY (project_id) REFERENCES projects (id) ON DELETE CASCADE
+        )
         """
     ]
     
@@ -165,7 +236,18 @@ def create_indexes() -> None:
         "CREATE INDEX IF NOT EXISTS idx_tags_category ON tags(category)",
         "CREATE INDEX IF NOT EXISTS idx_tags_value ON tags(value)",
         "CREATE INDEX IF NOT EXISTS idx_generation_log_timestamp ON generation_log(timestamp DESC)",
-        "CREATE INDEX IF NOT EXISTS idx_generation_log_success ON generation_log(success)"
+        "CREATE INDEX IF NOT EXISTS idx_generation_log_success ON generation_log(success)",
+        "CREATE INDEX IF NOT EXISTS idx_projects_status ON projects(status)",
+        "CREATE INDEX IF NOT EXISTS idx_projects_folder_path ON projects(folder_path)",
+        "CREATE INDEX IF NOT EXISTS idx_idea_projects_idea_id ON idea_projects(idea_id)",
+        "CREATE INDEX IF NOT EXISTS idx_idea_projects_project_id ON idea_projects(project_id)",
+        "CREATE INDEX IF NOT EXISTS idx_project_snapshots_project_id ON project_snapshots(project_id)",
+        "CREATE INDEX IF NOT EXISTS idx_project_snapshots_date ON project_snapshots(snapshot_date DESC)",
+        "CREATE INDEX IF NOT EXISTS idx_chat_sessions_project_id ON chat_sessions(project_id)",
+        "CREATE INDEX IF NOT EXISTS idx_chat_messages_session_id ON chat_messages(session_id)",
+        "CREATE INDEX IF NOT EXISTS idx_chat_messages_timestamp ON chat_messages(timestamp DESC)",
+        "CREATE INDEX IF NOT EXISTS idx_project_analyses_project_id ON project_analyses(project_id)",
+        "CREATE INDEX IF NOT EXISTS idx_project_analyses_date ON project_analyses(analysis_date DESC)"
     ]
     
     with get_db_cursor() as cursor:
@@ -181,7 +263,11 @@ def validate_database_schema() -> bool:
     Returns:
         bool: True if schema is valid, False if migration needed
     """
-    expected_tables = {'ideas', 'tags', 'idea_tags', 'market_data', 'generation_log'}
+    expected_tables = {
+        'ideas', 'tags', 'idea_tags', 'market_data', 'generation_log',
+        'projects', 'idea_projects', 'project_snapshots', 'chat_sessions', 
+        'chat_messages', 'project_analyses'
+    }
     
     try:
         with get_db_cursor() as cursor:

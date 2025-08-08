@@ -106,3 +106,117 @@ class SystemStatus(BaseModel):
     last_generation: Optional[datetime] = Field(None, description="Last successful generation")
     next_scheduled: Optional[datetime] = Field(None, description="Next scheduled generation")
     system_healthy: bool = Field(..., description="Overall system health")
+
+
+class ProjectStatus(str, Enum):
+    """Project development status."""
+    PLANNING = "planning"
+    DEVELOPMENT = "development"
+    TESTING = "testing"
+    COMPLETED = "completed"
+    PAUSED = "paused"
+    ARCHIVED = "archived"
+
+
+class ProjectBase(BaseModel):
+    """Base project model with core fields."""
+    name: str = Field(..., description="Project name")
+    description: str = Field(..., description="Project description")
+    folder_path: str = Field(..., description="Absolute path to project folder")
+    status: ProjectStatus = Field(ProjectStatus.PLANNING, description="Current project status")
+    repository_url: Optional[str] = Field(None, description="Git repository URL")
+
+
+class ProjectCreate(ProjectBase):
+    """Model for creating new projects."""
+    idea_ids: List[int] = Field(default_factory=list, description="Connected idea IDs")
+
+
+class ProjectResponse(ProjectBase):
+    """Model for project API responses."""
+    id: int = Field(..., description="Unique project identifier")
+    created_at: datetime = Field(..., description="Project creation date")
+    updated_at: datetime = Field(..., description="Last update date")
+    idea_count: int = Field(0, description="Number of connected ideas")
+    last_analysis: Optional[datetime] = Field(None, description="Last project analysis date")
+    
+    class Config:
+        from_attributes = True
+
+
+class ProjectSnapshot(BaseModel):
+    """Model for capturing project state at a point in time."""
+    project_id: int = Field(..., description="Associated project ID")
+    snapshot_date: datetime = Field(..., description="When snapshot was taken")
+    file_count: int = Field(..., description="Number of files in project")
+    line_count: int = Field(..., description="Total lines of code")
+    key_files: List[str] = Field(default_factory=list, description="Important project files")
+    technologies_detected: List[str] = Field(default_factory=list, description="Technologies found")
+    progress_notes: Optional[str] = Field(None, description="Progress observations")
+
+
+class ChatMessage(BaseModel):
+    """Individual chat message."""
+    role: str = Field(..., description="Message role (user/assistant)")
+    content: str = Field(..., description="Message content")
+    timestamp: datetime = Field(..., description="Message timestamp")
+
+
+class ChatSessionBase(BaseModel):
+    """Base chat session model."""
+    project_id: int = Field(..., description="Associated project ID")
+    title: str = Field(..., description="Chat session title")
+
+
+class ChatSessionCreate(ChatSessionBase):
+    """Model for creating chat sessions."""
+    initial_message: Optional[str] = Field(None, description="Initial user message")
+
+
+class ChatSessionResponse(ChatSessionBase):
+    """Model for chat session responses."""
+    id: int = Field(..., description="Unique session identifier")
+    created_at: datetime = Field(..., description="Session creation date")
+    updated_at: datetime = Field(..., description="Last update date")
+    message_count: int = Field(0, description="Number of messages in session")
+    last_message: Optional[str] = Field(None, description="Preview of last message")
+    
+    class Config:
+        from_attributes = True
+
+
+class ChatMessageCreate(BaseModel):
+    """Model for creating chat messages."""
+    session_id: int = Field(..., description="Chat session ID")
+    role: str = Field(..., description="Message role (user/assistant)")
+    content: str = Field(..., description="Message content")
+
+
+class ChatMessageResponse(ChatMessage):
+    """Model for chat message responses."""
+    id: int = Field(..., description="Unique message identifier")
+    session_id: int = Field(..., description="Associated session ID")
+    
+    class Config:
+        from_attributes = True
+
+
+class IdeaProjectConnection(BaseModel):
+    """Model for idea-project connections."""
+    idea_id: int = Field(..., description="Connected idea ID")
+    project_id: int = Field(..., description="Connected project ID")
+    connection_date: datetime = Field(..., description="When connection was made")
+    relevance_notes: Optional[str] = Field(None, description="How idea relates to project")
+
+
+class ProjectAnalysis(BaseModel):
+    """Model for project-idea comparison analysis."""
+    project_id: int = Field(..., description="Analyzed project ID")
+    analysis_date: datetime = Field(..., description="When analysis was performed")
+    idea_alignment_score: float = Field(..., description="How well project matches connected ideas (0-1)")
+    implemented_features: List[str] = Field(default_factory=list, description="Features implemented")
+    missing_features: List[str] = Field(default_factory=list, description="Features from ideas not yet implemented")
+    divergent_features: List[str] = Field(default_factory=list, description="Features not in original ideas")
+    technical_debt_score: float = Field(..., description="Technical debt assessment (0-1)")
+    completion_estimate: float = Field(..., description="Estimated completion percentage (0-1)")
+    recommendations: List[str] = Field(default_factory=list, description="Development recommendations")
