@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Inspo - App Idea Generator</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="header__title">Daily Inspo</h1>
+            <p class="header__subtitle">Automated App Idea Generation</p>
+            <div class="header__stats">
+                <span id="stats-total">0</span> ideas generated
+                <span class="separator">•</span>
+                <span id="stats-last">Never</span> last update
+            </div>
+        </header>
+
+        <!-- Filters -->
+        <section class="filters">
+            <div class="filters__search">
+                <input 
+                    type="text" 
+                    id="search-input" 
+                    placeholder="Search ideas..."
+                    class="filters__search-input"
+                >
+            </div>
+            
+            <div class="filters__controls">
+                <div class="filter-group">
+                    <label for="industry-filter">Industry:</label>
+                    <select id="industry-filter" class="filter-select" multiple>
+                        <!-- Options populated by JavaScript -->
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="complexity-filter">Complexity:</label>
+                    <select id="complexity-filter" class="filter-select" multiple>
+                        <option value="mvp">MVP</option>
+                        <option value="medium">Medium</option>
+                        <option value="complex">Complex</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="technology-filter">Technology:</label>
+                    <select id="technology-filter" class="filter-select" multiple>
+                        <!-- Options populated by JavaScript -->
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="market-filter">Target Market:</label>
+                    <select id="market-filter" class="filter-select" multiple>
+                        <!-- Options populated by JavaScript -->
+                    </select>
+                </div>
+            </div>
+            
+            <div class="filters__actions">
+                <button id="apply-filters" class="btn btn--primary">Apply Filters</button>
+                <button id="clear-filters" class="btn btn--secondary">Clear All</button>
+                <button id="random-idea" class="btn btn--accent">Generate New Idea</button>
+            </div>
+        </section>
+
+        <!-- Loading State -->
+        <div id="loading" class="loading hidden">
+            <div class="loading__spinner"></div>
+            <p>Loading ideas...</p>
+        </div>
+
+        <!-- Ideas Grid -->
+        <main class="ideas-grid" id="ideas-grid">
+            <!-- Idea cards will be populated by JavaScript -->
+        </main>
+
+        <!-- Pagination -->
+        <div class="pagination" id="pagination">
+            <button id="prev-page" class="pagination__btn" disabled>&larr; Previous</button>
+            <span id="page-info" class="pagination__info">Page 1 of 1</span>
+            <button id="next-page" class="pagination__btn" disabled>Next &rarr;</button>
+        </div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="empty-state hidden">
+            <h2>No ideas found</h2>
+            <p>Try adjusting your filters or check back later for new ideas.</p>
+        </div>
+    </div>
+
+    <!-- Idea Detail Modal -->
+    <div id="idea-modal" class="modal hidden">
+        <div class="modal__backdrop"></div>
+        <div class="modal__content">
+            <div class="modal__header">
+                <h2 id="modal-title" class="modal__title">Idea Title</h2>
+                <button id="modal-close" class="modal__close">&times;</button>
+            </div>
+            <div class="modal__body">
+                <div id="modal-content" class="modal__idea-content">
+                    <!-- Detailed idea content populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
